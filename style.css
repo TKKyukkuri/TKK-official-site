@@ -1,0 +1,308 @@
+body {
+  margin: 0;
+  background: #fff;
+  color: #000;
+  font-family: "Noto Serif JP", serif;
+}
+
+/* ===== Header ===== */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 24px 0;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.nav a {
+  font-size: 14px;
+  letter-spacing: 0.4em;
+  text-decoration: none;
+  color: #000;
+  opacity: 0.7;
+  transition: 0.3s ease;
+}
+
+.nav a:hover {
+  opacity: 1;
+}
+
+/* ===== Main ===== */
+.container {
+  max-width: 420px;
+  margin: 180px auto 0;
+  text-align: center;
+}
+
+/* ===== Key Visual ===== */
+.keyvisual {
+  width: 200px;
+  border-radius: 50%;
+  margin-bottom: 80px;
+  opacity: 0;
+  animation: fadeUp 1.8s ease forwards;
+}
+
+h1 {
+  font-size: 42px;
+  letter-spacing: 0.35em;
+  font-weight: 300;
+  margin-bottom: 90px;
+}
+
+/* ===== Section ===== */
+section {
+  margin-bottom: 64px;
+}
+
+h2 {
+  font-size: 12px;
+  letter-spacing: 0.35em;
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+
+h2::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: #000;
+  opacity: 0.4;
+  margin: 0 auto 14px;
+}
+
+/* ===== Text ===== */
+.news {
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+.profile {
+  font-size: 13px;
+  line-height: 1.9;
+  opacity: 0.85;
+}
+
+/* ===== WORKS ===== */
+.works-block {
+  margin-bottom: 80px;
+}
+
+.works-label {
+  font-size: 11px;
+  letter-spacing: 0.35em;
+  opacity: 0.6;
+  margin-bottom: 24px;
+}
+
+.video-wrap,
+.movie-wrap {
+  max-width: 320px;
+  margin: 0 auto 24px;
+}
+
+.video-wrap iframe,
+.movie-wrap iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.works-text {
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  opacity: 0.7;
+}
+
+/* ===== Footer ===== */
+footer {
+  margin-top: 120px;
+  font-size: 11px;
+  opacity: 0.4;
+  letter-spacing: 0.15em;
+}
+
+/* ===== Animation ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+  .container {
+    margin-top: 120px;
+    padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+}
+/* ===== ABOUT PAGE ===== */
+.about-container {
+  max-width: 700px;
+  margin: 220px auto 0;   /* ヘッダーと重ならない */
+  text-align: center;
+  padding: 0 20px;
+}
+
+.about-title {
+  font-size: 64px;
+  letter-spacing: 0.4em;
+  font-weight: 500;
+  margin-bottom: 80px;
+}
+
+.about-text {
+  font-size: 15px;
+  line-height: 2.2;
+  opacity: 0.85;
+  margin-bottom: 40px;
+}
+
+/* ===== スマホ対応 ===== */
+@media (max-width: 600px) {
+  .about-container {
+    margin-top: 160px;
+  }
+
+  .about-title {
+    font-size: 40px;
+    letter-spacing: 0.3em;
+    margin-bottom: 56px;
+  }
+
+  .about-text {
+    font-size: 14px;
+    line-height: 2;
+  }
+}
+
+/* ===== CONTACT PAGE ===== */
+.contact-container {
+  max-width: 700px;
+  margin: 220px auto 0;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.contact-title {
+  font-size: 64px;
+  letter-spacing: 0.4em;
+  font-weight: 500;
+  margin-bottom: 80px;
+}
+
+.contact-text {
+  font-size: 15px;
+  line-height: 2.2;
+  opacity: 0.85;
+  margin-bottom: 40px;
+}
+
+.contact-mail {
+  font-size: 16px;
+  letter-spacing: 0.15em;
+  opacity: 0.95;
+  margin-bottom: 32px;
+}
+
+.contact-note {
+  font-size: 12px;
+  opacity: 0.6;
+  line-height: 2;
+}
+
+/* ===== スマホ対応 ===== */
+@media (max-width: 600px) {
+  .contact-container {
+    margin-top: 160px;
+  }
+
+  .contact-title {
+    font-size: 40px;
+    letter-spacing: 0.3em;
+    margin-bottom: 56px;
+  }
+
+  .contact-text {
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  .contact-mail {
+    font-size: 14px;
+  }
+
+  .contact-note {
+    font-size: 11px;
+  }
+}
+/* 再生リスト 2列表示 */
+.playlist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* 各プレイリスト */
+.playlist-item iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+}
+
+/* スマホでは1列 */
+@media screen and (max-width: 768px) {
+  .playlist-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* 再生リスト 2列表示 */
+.playlist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.playlist-item iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+}
+
+/* テキスト中央寄せ */
+.works-text {
+  text-align: center;
+  margin-top: 10px;
+  letter-spacing: 0.1em;
+}
+
+/* スマホは1列 */
+@media screen and (max-width: 768px) {
+  .playlist-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* 最新動画 */
+.latest-movie iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  margin-top: 30px;
+}
